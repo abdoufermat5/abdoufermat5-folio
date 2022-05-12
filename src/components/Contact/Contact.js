@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
       },
       canIsubmit: false,
       btnState: false,
-      btnText: "Submit"
+      btnText: "Submit",
     };
     this.form = React.createRef();
 
@@ -119,7 +119,7 @@ export default class Contact extends React.Component {
       },
       canIsubmit: false,
       btnState: false,
-      btnText: 'Submit'
+      btnText: "Submit",
     });
   }
 
@@ -163,11 +163,12 @@ export default class Contact extends React.Component {
     );
     if (
       validateEmail(this.state.user_email) === false &&
-      validateNameMessage(this.state.user_name) === false
+      validateNameMessage(this.state.user_name) === false &&
+      validateNameMessage(this.state.user_message) === false
     ) {
       this.setState({
-        btnText: 'Processing...'
-      })
+        btnText: "Processing...",
+      });
       emailjs
         .sendForm(SERVICE_ID, TEMPLATE_ID, this.form.current, USER_ID)
         .then(
@@ -235,7 +236,12 @@ export default class Contact extends React.Component {
         </Container>
         <Container>
           <Card>
-            <form className="form" onSubmit={this.handleSubmit} ref={this.form} data-netlify="true">
+            <form
+              className="form"
+              onSubmit={this.handleSubmit}
+              ref={this.form}
+              data-netlify="true"
+            >
               <TextInput
                 {...user_name}
                 onFocus={this.handleFocus}
@@ -254,13 +260,19 @@ export default class Contact extends React.Component {
                 onBlur={this.handleBlur}
                 onChange={this.handleChange}
               />
-              {this.getBtnState() ? 
-              (<button className="custom-button" type="submit" value="Submit">
-                {this.state.btnText}
-              </button>):(
-                <button className="custom-button" type="submit" value="Submit" disabled>
-                Submit
-              </button>
+              {this.getBtnState() ? (
+                <button className="custom-button" type="submit" value="Submit">
+                  {this.state.btnText}
+                </button>
+              ) : (
+                <button
+                  className="custom-button"
+                  type="submit"
+                  value="Submit"
+                  disabled
+                >
+                  Submit
+                </button>
               )}
             </form>
           </Card>
