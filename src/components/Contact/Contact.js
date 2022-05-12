@@ -7,7 +7,6 @@ import Card from "./Card";
 import TextInput from "./TextInput";
 import TextArea from "./TextArea";
 import Swal from "sweetalert2";
-import "./formstyle.scss";
 
 const SERVICE_ID = "service_p9l4yke";
 const TEMPLATE_ID = "template_1z6zw9g";
@@ -23,7 +22,7 @@ export default class Contact extends React.Component {
         value: "",
         focus: false,
         errorMessage: false,
-        errorOccured: false
+        errorOccured: false,
       },
       user_email: {
         name: "user_email",
@@ -31,7 +30,7 @@ export default class Contact extends React.Component {
         value: "",
         focus: false,
         errorMessage: false,
-        errorOccured: false
+        errorOccured: false,
       },
       user_message: {
         name: "user_message",
@@ -39,9 +38,11 @@ export default class Contact extends React.Component {
         value: "",
         focus: false,
         errorMessage: false,
-        errorOccured: false
+        errorOccured: false,
       },
       canIsubmit: false,
+      btnState: false,
+      btnText: "Submit"
     };
     this.form = React.createRef();
 
@@ -65,6 +66,11 @@ export default class Contact extends React.Component {
     const state = Object.assign({}, this.state[name]);
     state.focus = false;
     this.setState({ [name]: state });
+    this.setState({
+      btnState:
+        validateEmail(this.state.user_email) == false &&
+        validateNameMessage(this.state.user_name) == false,
+    });
   }
 
   handleChange(e) {
@@ -74,7 +80,47 @@ export default class Contact extends React.Component {
     state.value = e.target.value;
 
     this.setState({ [name]: state });
-    
+    this.setState({
+      btnState:
+        validateEmail(this.state.user_email) == false &&
+        validateNameMessage(this.state.user_name) == false,
+    });
+  }
+
+  getBtnState() {
+    return this.state.btnState;
+  }
+
+  reset() {
+    this.setState({
+      user_name: {
+        name: "user_name",
+        label: "Name",
+        value: "",
+        focus: false,
+        errorMessage: false,
+        errorOccured: false,
+      },
+      user_email: {
+        name: "user_email",
+        label: "Email",
+        value: "",
+        focus: false,
+        errorMessage: false,
+        errorOccured: false,
+      },
+      user_message: {
+        name: "user_message",
+        label: "Message",
+        value: "",
+        focus: false,
+        errorMessage: false,
+        errorOccured: false,
+      },
+      canIsubmit: false,
+      btnState: false,
+      btnText: 'Submit'
+    });
   }
 
   // handleSubmit(e) {
@@ -91,53 +137,43 @@ export default class Contact extends React.Component {
       user_email: {
         ...this.state.user_email,
         errorMessage: validateEmail(this.state.user_email),
-        errorOccured: validateEmail(this.state.user_email)!==false
+        errorOccured: validateEmail(this.state.user_email) !== false,
       },
       user_name: {
         ...this.state.user_name,
         errorMessage: validateNameMessage(this.state.user_name),
-        errorOccured: validateNameMessage(this.state.user_name)!==false,
+        errorOccured: validateNameMessage(this.state.user_name) !== false,
       },
       user_message: {
         ...this.state.user_message,
         errorMessage: validateNameMessage(this.state.user_message),
-        errorOccured: validateNameMessage(this.state.user_message)!==false,
+        errorOccured: validateNameMessage(this.state.user_message) !== false,
       },
     });
 
     this.setState({
       canIsubmit:
-        !this.state.user_email.errorMessage &&
-        !this.state.user_name.errorMessage,
+        validateEmail(this.state.user_email) == false &&
+        validateNameMessage(this.state.user_name) == false,
     });
-
-    if (this.state.canIsubmit) {
+    console.log(
+      "form ref",
+      validateEmail(this.state.user_email),
+      this.state.user_email.value
+    );
+    if (
+      validateEmail(this.state.user_email) == false &&
+      validateNameMessage(this.state.user_name) == false
+    ) {
+      this.setState({
+        btnText: 'Processing...'
+      })
       emailjs
         .sendForm(SERVICE_ID, TEMPLATE_ID, this.form.current, USER_ID)
         .then(
           (result) => {
             console.log(result.text);
-            this.setState({
-              user_email: {
-                ...this.state.user_email,
-                errorMessage: false,
-                errorOccured: false
-              },
-              user_name: {
-                ...this.state.user_name,
-                errorMessage: false,
-                errorOccured: false
-              },
-              user_message: {
-                ...this.state.user_message,
-                errorMessage: false,
-                errorOccured: false
-              },
-            });
-
-            this.setState({
-              canIsubmit: false,
-            });
+            this.reset();
             Swal.fire({
               icon: "success",
               title: "Message Sent Successfully",
@@ -218,9 +254,14 @@ export default class Contact extends React.Component {
                 onBlur={this.handleBlur}
                 onChange={this.handleChange}
               />
-              <button className="custom-button" type="submit" value="Submit">
+              {this.getBtnState() ? 
+              (<button className="custom-button" type="submit" value="Submit">
+                {this.state.btnText}
+              </button>):(
+                <button className="custom-button" type="submit" value="Submit" disabled>
                 Submit
               </button>
+              )}
             </form>
           </Card>
         </Container>

@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
+import "./formstyle.scss";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
