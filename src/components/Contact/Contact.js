@@ -235,7 +235,7 @@ export default class Contact extends React.Component {
         </Container>
         <Container>
           <Card>
-            <form className="form" onSubmit={this.handleSubmit} ref={this.form}>
+            <form className="form" onSubmit={this.handleSubmit} ref={this.form} data-netlify="true">
               <TextInput
                 {...user_name}
                 onFocus={this.handleFocus}
