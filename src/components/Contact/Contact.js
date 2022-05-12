@@ -68,8 +68,8 @@ export default class Contact extends React.Component {
     this.setState({ [name]: state });
     this.setState({
       btnState:
-        validateEmail(this.state.user_email) == false &&
-        validateNameMessage(this.state.user_name) == false,
+        validateEmail(this.state.user_email) === false &&
+        validateNameMessage(this.state.user_name) === false,
     });
   }
 
@@ -82,8 +82,8 @@ export default class Contact extends React.Component {
     this.setState({ [name]: state });
     this.setState({
       btnState:
-        validateEmail(this.state.user_email) == false &&
-        validateNameMessage(this.state.user_name) == false,
+        validateEmail(this.state.user_email) === false &&
+        validateNameMessage(this.state.user_name) === false,
     });
   }
 
@@ -153,8 +153,8 @@ export default class Contact extends React.Component {
 
     this.setState({
       canIsubmit:
-        validateEmail(this.state.user_email) == false &&
-        validateNameMessage(this.state.user_name) == false,
+        validateEmail(this.state.user_email) === false &&
+        validateNameMessage(this.state.user_name) === false,
     });
     console.log(
       "form ref",
@@ -162,8 +162,8 @@ export default class Contact extends React.Component {
       this.state.user_email.value
     );
     if (
-      validateEmail(this.state.user_email) == false &&
-      validateNameMessage(this.state.user_name) == false
+      validateEmail(this.state.user_email) === false &&
+      validateNameMessage(this.state.user_name) === false
     ) {
       this.setState({
         btnText: 'Processing...'
