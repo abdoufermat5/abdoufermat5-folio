@@ -8,9 +8,10 @@ import TextInput from "./TextInput";
 import TextArea from "./TextArea";
 import Swal from "sweetalert2";
 
-const SERVICE_ID = "service_p9l4yke";
-const TEMPLATE_ID = "template_1z6zw9g";
-const USER_ID = "a8tCIDaUj63hGbTLZ";
+
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+const USER_ID = process.env.REACT_APP_USER_ID;
 
 export default class Contact extends React.Component {
   constructor() {
@@ -53,6 +54,7 @@ export default class Contact extends React.Component {
   }
 
   handleFocus(e) {
+    console.log("ENV, ", SERVICE_ID);
     const name = e.target.name;
     const state = Object.assign({}, this.state[name]);
     state.focus = true;
@@ -131,7 +133,7 @@ export default class Contact extends React.Component {
   // }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("WAW---", this.form.current);
+    
 
     this.setState({
       user_email: {
@@ -156,11 +158,6 @@ export default class Contact extends React.Component {
         validateEmail(this.state.user_email) === false &&
         validateNameMessage(this.state.user_name) === false,
     });
-    console.log(
-      "form ref",
-      validateEmail(this.state.user_email),
-      this.state.user_email.value
-    );
     if (
       validateEmail(this.state.user_email) === false &&
       validateNameMessage(this.state.user_name) === false &&
@@ -188,7 +185,7 @@ export default class Contact extends React.Component {
             });
           },
           (error) => {
-            console.log(error.text);
+            
             Swal.fire({
               icon: "warning",
               title: "Ooops, something went wrong. Try again!",
@@ -205,8 +202,7 @@ export default class Contact extends React.Component {
         );
       e.target.reset();
     } else {
-      console.log("STATE---", this.state);
-      console.log("CAN I SUBMIT:   ", this.state.canIsubmit);
+     
       Swal.fire({
         icon: "error",
         title: "Please fill the form correctly",
@@ -225,7 +221,7 @@ export default class Contact extends React.Component {
   render() {
     const { user_name, user_email, user_message } = this.state;
 
-    console.log("NAME -- ", user_name);
+
     return (
       <Container fluid className="contact-section">
         <Particle />
