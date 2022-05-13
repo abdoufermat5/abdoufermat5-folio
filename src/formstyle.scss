@@ -10,7 +10,7 @@ $main-white: #ffffff;
 /* Lists */
 $colors: $main-green;
 $fourColors: $main-green;
-$pages: "home" "about" "skills" "contact" "blog";
+$pages: "contact";
 
 //Themes For Every Route
 $theme-colors: (
@@ -18,11 +18,7 @@ $theme-colors: (
     "about": $main-green,
   ),
   "text": (
-    "home": $main-white,
-    "about": $main-white,
-    "skills": $main-white,
     "contact": $main-white,
-    "blog": $main-white,
   ),
 );
 

@@ -54,7 +54,6 @@ export default class Contact extends React.Component {
   }
 
   handleFocus(e) {
-    console.log("ENV, ", SERVICE_ID);
     const name = e.target.name;
     const state = Object.assign({}, this.state[name]);
     state.focus = true;
@@ -170,7 +169,7 @@ export default class Contact extends React.Component {
         .sendForm(SERVICE_ID, TEMPLATE_ID, this.form.current, USER_ID)
         .then(
           (result) => {
-            console.log(result.text);
+            
             this.reset();
             Swal.fire({
               icon: "success",
