@@ -393,6 +393,11 @@ button:focus {
   padding-left: 10px;
 }
 
+.social-icons > a {
+  position: relative;
+  z-index: 9999;
+}
+
 .icon-colour {
   color: #7aceb2d7 !important;
 }
