@@ -12,7 +12,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Abdou Yaya </span>
             from <span className="purple"> Tambacounda, Senegal.</span>
-            <br />I am a junior pursuing Computer Science at Thies Polytechnic (<a className="ept-link" href="https://www.ept.sn" target="_blank" rel="noreferrer">EPT</a>).
+            <br />I am pursuing Computer Science at Paris Saclay University (<a className="ept-link" href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noreferrer">website</a>).
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
