@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import projects from "../../Assets/Projects/projects.jpg";
+import dataQuality from "../../Assets/Projects/dataQuality.png";
+import cloud_perso from "../../Assets/Projects/cloud_perso.jpg";
 import xaalys from "../../Assets/Projects/xaalys.png";
 import teamxing from "../../Assets/Projects/teamxing.jpg";
 import desaes from "../../Assets/Projects/DES-vs-AES.jpg";
@@ -17,10 +19,38 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <h2 style={{ color: "white", marginTop:"3px" }}>
           Here are a few projects I've worked on recently.
+        </h2>
+        <p style={{ color: "white" }}>
+         <u>Data integration & machine learning projects</u>
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+         
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={dataQuality}
+              isBlog={false}
+              title="Evaluation of data quality and mapping"
+              description="In this project we have implemented a set of Talend jobs to evaluate the quality of the data through some quality factors (conformity, completeness, heterogeneity, duplicates) and to compute a target schema (mapping) from the computational expressions (join, union, projection...)."
+              link="#"/>
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={cloud_perso}
+              isBlog={false}
+              title="Calculs statistiques 'privacy-by-design' pour le Cloud Personnel"
+              description="Study of a dataset of 17,621 trajectories with a total distance of about 1.2 million kilometers and a total duration of more than 48,000 hours collected over 5 years. The objective is to determine the home-work journeys and the most commonly used means of transport to make this journey from the GPS data."
+              link="#"
+            />
+          </Col>
+        </Row>
+        <p style={{ color: "white" }}>
+         <u>Web & Mobile Applications</u>
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+         
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={xaalys}
