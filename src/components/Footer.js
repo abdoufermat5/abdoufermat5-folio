@@ -17,7 +17,7 @@ function Footer() {
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
-            <li className="social-icons">
+            <li className="social-icons footer-social-icons">
               <a
                 href="https://github.com/abdoufermat5"
                 style={{ color: "white" }}
@@ -27,7 +27,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            <li className="social-icons footer-social-icons">
               <a
                 href="https://twitter.com/esprit_bayesien"
                 style={{ color: "white" }}
@@ -37,7 +37,7 @@ function Footer() {
                 <AiOutlineTwitter />
               </a>
             </li>
-            <li className="social-icons">
+            <li className="social-icons footer-social-icons">
               <a
                 style={{ color: "white" }}
                 href="https://www.linkedin.com/in/abdou-yaya-sadiakhou-40a94b1a3/"

@@ -393,7 +393,7 @@ button:focus {
   padding-left: 10px;
 }
 
-.social-icons > a {
+.social-icons.footer-social-icons > a {
   position: relative;
   z-index: 9999;
 }
