@@ -389,8 +389,13 @@ button:focus {
 
 .social-icons {
   display: inline-block !important;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.social-icons.footer-social-icons > a {
+  position: relative;
+  z-index: 9999;
 }
 
 .icon-colour {

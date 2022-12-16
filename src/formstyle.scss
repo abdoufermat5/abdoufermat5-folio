@@ -3,44 +3,22 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:700|Roboto");
 @import url("https://fonts.googleapis.com/css?family=Anton|Roboto");
 
-/* Text Color Variables */
-$text-color: #444c5c;
-
 /* Color Variables */
-$main-bg: #f7f6f4;
-$main-grey: #d8d5c4;
 $main-green: #78a5a3;
-$main-yellow-light: #e1b16a;
-$main-yellow: #ffc300;
-$main-blue: #444c5c;
-$main-dark: rgb(51, 51, 51);
-$main-red: #ce5a57;
 $main-white: #ffffff;
-$main-black: #000a17;
-$main-overlay: rgba(0, 0, 0, 0.3);
 
 /* Lists */
-$colors: $main-yellow $main-green $main-blue $main-red $main-dark;
-$rainbowColors: $main-yellow $main-grey $main-blue $main-red $main-dark
-  $main-red $main-blue $main-grey $main-yellow;
-$fourColors: $main-yellow $main-green $main-blue $main-red;
-$pages: "home" "about" "skills" "contact" "blog";
+$colors: $main-green;
+$fourColors: $main-green;
+$pages: "contact";
 
 //Themes For Every Route
 $theme-colors: (
   "bg": (
-    "home": $main-dark,
     "about": $main-green,
-    "skills": $main-blue,
-    "contact": $main-red,
-    "blog": $main-yellow,
   ),
   "text": (
-    "home": $main-white,
-    "about": $main-white,
-    "skills": $main-white,
     "contact": $main-white,
-    "blog": $main-white,
   ),
 );
 
@@ -115,6 +93,12 @@ $accent: #e72;
       background: #7aceb2d7;
       box-shadow: 2px 2px 1px 3px rgba(95, 89, 89, 0.3);
       border-bottom: #000a17;
+    }
+    &:disabled,
+    &[disabled] {
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
     }
   }
 
