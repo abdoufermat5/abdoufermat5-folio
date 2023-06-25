@@ -484,7 +484,6 @@ Form {
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
 }
 .project-card-view:hover {
   transform: scale(1.02) !important;
@@ -497,7 +496,6 @@ Form {
   padding-bottom: 50px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
-  height: auto !important;
 }
 
 .blog-card-view {
@@ -505,7 +503,6 @@ Form {
   box-shadow: 0 3px 3px 2px rgba(53, 136, 101, 0.459) !important;
   color: white !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
 }
 
 .blog-link {
@@ -592,6 +589,9 @@ Form {
   transition: all 0.4s ease 0s !important;
 }
 
+
+
+
 @media (max-width: 767px) {
   .tech-icons {
     margin: 10px !important;
@@ -603,6 +603,7 @@ Form {
   overflow: hidden !important;
   border: 2.2px solid rgba(122, 206, 178, 0.936) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;

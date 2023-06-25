@@ -33,7 +33,7 @@ function Projects() {
               isBlog={false}
               title="Evaluation of data quality and mapping"
               description="In this project we have implemented a set of Talend jobs to evaluate the quality of the data through some quality factors (conformity, completeness, heterogeneity, duplicates) and to compute a target schema (mapping) from the computational expressions (join, union, projection...)."
-              link="#"/>
+              link="https://drive.google.com/file/d/1rQXaZTcmAdrxKxp0BB9JVjIsvtyO8Srb/view?usp=sharing"/>
           </Col>
 
           <Col md={4} className="project-card">
@@ -42,7 +42,7 @@ function Projects() {
               isBlog={false}
               title="Calculs statistiques 'privacy-by-design' pour le Cloud Personnel"
               description="Study of a dataset of 17,621 trajectories with a total distance of about 1.2 million kilometers and a total duration of more than 48,000 hours collected over 5 years. The objective is to determine the home-work journeys and the most commonly used means of transport to make this journey from the GPS data."
-              link="#"
+              link="https://abdoufermat5-gps-statistiques-accueil-eoxkcm.streamlit.app/"
             />
           </Col>
         </Row>
@@ -77,7 +77,7 @@ function Projects() {
               isBlog={false}
               title="Malaabe"
               description="It is a project that aims to fight against corruption for the withdrawal of administrative documents such as passports, birth certificates. We presented it at the UNODC hackathon (United Nations Office on Drugs and Crime) of 2021"
-              link="#"
+              link="https://github.com/malabe-org"
             />
           </Col>
 

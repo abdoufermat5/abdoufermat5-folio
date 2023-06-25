@@ -1,53 +1,63 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
-  DiJavascript1,
   DiReact,
   DiAndroid,
-  DiPython,
-  DiGit,
+  DiDjango
 } from "react-icons/di";
 import {
-  SiTensorflow,
-  SiFirebase,
   SiFlutter,
-  SiVuedotjs
+  SiVuedotjs,
+  SiFlask,
+  SiFastapi,
+  SiExpress
 } from "react-icons/si";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <div className="stack-title">Frontend stack</div>
+      
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <SiFlask />
+        <p>Flask</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiVuedotjs />
+        <p>VueJS</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiReact />
+        <p>ReactJS</p>
       </Col>
+
+      <div className="stack-title">Mobile stack</div>
+      
       <Col xs={4} md={2} className="tech-icons">
         <DiAndroid />
+        <p>Android</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiFlutter />
+        <p>Flutter</p>
+      </Col>
+      
+      <div className="stack-title">Backend stack</div>
+      
+      <Col xs={4} md={2} className="tech-icons">
+        <DiDjango />
+        <p>Django Rest</p>
+      </Col>
+  
+      <Col xs={4} md={2} className="tech-icons">
+        <SiFastapi />
+        <p>FastAPI</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiExpress />
+        <p>ExpressJS</p>
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTensorflow />
-      </Col>
+  
     </Row>
   );
 }

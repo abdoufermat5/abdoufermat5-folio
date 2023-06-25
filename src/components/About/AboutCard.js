@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { BiFootball } from "react-icons/bi";
-import { GiBrain } from "react-icons/gi";
-import { SiWolframmathematica } from "react-icons/si";
+import { FaChess } from "react-icons/fa";
+import { SiArtstation } from "react-icons/si";
 
 function AboutCard() {
   return (
@@ -12,20 +12,20 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Abdou Yaya </span>
             from <span className="purple"> Tambacounda, Senegal.</span>
-            <br />I am pursuing Computer Science at Paris Saclay University (<a className="ept-link" href="https://www.universite-paris-saclay.fr/" target="_blank" rel="noreferrer">website</a>).
+            <br />I am pursuing Computer Science at University of Versailles Saint-Quentin (<a className="ept-link" href="https://www.uvsq.fr/" target="_blank" rel="noreferrer">website</a>).
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <SiWolframmathematica /> Solving Maths problems
+              <FaChess /> Playing Chess
             </li>
             <li className="about-activity">
-              <GiBrain /> Playing Scrabble game
+              <SiArtstation /> Watching Animes or Reading Mangas
             </li>
             <li className="about-activity">
-              <BiFootball /> Watching Soccer
+              <BiFootball /> Watching Football games
             </li>
           </ul>
 

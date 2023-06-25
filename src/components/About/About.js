@@ -2,10 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Github from "./Github";
-import Techstack from "./Techstack";
+import Techstack from "./Devstack";
+import ProgrammingStack from "./Programmingstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about-me.svg";
 import Toolstack from "./Toolstack";
+import DevOpsStack from "./Devopstack";
+import QueryStack from "./Querystack";
 
 function About() {
   return (
@@ -36,10 +39,28 @@ function About() {
             </Col>
           </Row>
           <h1 className="project-heading">
-            Professional <strong className="purple">Skillset </strong>
+            Programming <strong className="purple">Skillset </strong>
+          </h1>
+
+          <ProgrammingStack />
+
+          <h1 className="project-heading">
+            Query & Data processing <strong className="purple">Skillset </strong>
+          </h1>
+
+          <QueryStack />
+
+          <h1 className="project-heading">
+            Tech <strong className="purple">Skillset </strong>
           </h1>
 
           <Techstack />
+
+          <h1 className="project-heading">
+            Devops & Cloud <strong className="purple">Skillset </strong>
+          </h1>
+
+          <DevOpsStack />
 
           <h1 className="project-heading">
             <strong className="purple">Tools</strong> I use

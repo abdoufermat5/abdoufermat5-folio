@@ -1,11 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/escr.png";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
@@ -27,17 +24,36 @@ function Home2() {
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and also areas related to{" "}
-                <b className="purple">
-                  Machine Learning, Mathematics.
-                </b>
-              </i>
+              <Tilt
+                className="track-on-window"
+                perspective={500}
+                glareEnable={true}
+                glareMaxOpacity={0.75}
+                glarePosition="all"
+                scale={1.02}
+                trackOnWindow={true}
+              >
+                <div
+                  className="card"
+                  style={{ opacity: 0.3, backgroundColor: "#769c86" }}
+                >
+                  Ready to take your data infrastructure to the next level?
+                  &nbsp;
+                  <i>
+                    <b className="purple">
+                      I bring a strong background in data engineering,{" "}
+                    </b>{" "}
+                    enabling organizations to harness the power of their data
+                    and make informed decisions{" "}
+                    <b className="purple">with confidence.</b>
+                  </i>
+                </div>
+              </Tilt>
               <br />
               <br />
               Whenever possible, I also apply my passion for developing apps
-              with <b className="purple">Django</b> and
+              with <b className="purple">Django</b>,{" "}
+              <b className="purple">FastAPI</b> and
               <i>
                 <b className="purple">
                   {" "}
@@ -46,7 +62,7 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> Vue.js and React.js</b>
+                <b className="purple"> Vue.js or React.js</b>
               </i>
             </p>
           </Col>
@@ -93,7 +109,6 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              
             </ul>
           </Col>
         </Row>
