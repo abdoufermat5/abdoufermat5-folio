@@ -27,16 +27,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons footer-social-icons">
-              <a
-                href="https://twitter.com/esprit_bayesien"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li>
+            
             <li className="social-icons footer-social-icons">
               <a
                 style={{ color: "white" }}

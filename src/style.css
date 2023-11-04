@@ -476,6 +476,7 @@ Form {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+  max-height: 800px;
 }
 
 .project-card-view {
@@ -520,10 +521,21 @@ Form {
   box-shadow: 0 3px 3px 5px rgba(80, 187, 169, 0.561) !important;
 }
 
+.img-container {
+  width: auto; /* La largeur peut être auto pour maintenir le ratio de l'image ou une valeur fixe */
+  height: 200px; /* Hauteur fixe pour le conteneur */
+  overflow: hidden; /* Cache les parties de l'image qui dépassent */
+  display: flex; /* Utilise flexbox pour centrer l'image */
+  align-items: center; /* Centrage vertical */
+  justify-content: center; /* Centrage horizontal */
+}
+
 .card-img-top {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  height: auto;
+  min-height: 100%;
 }
 
 .blog-img {
@@ -531,7 +543,24 @@ Form {
   opacity: 0.8 !important;
   border-radius: 0px !important;
 }
+.card-title {
+  min-height: 75px;
+}
+.card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer; 
+  max-width: 600px; 
+  transition: max-width 0.5s ease;
+}
 
+.card-text:hover {
+  max-width: none; /* Removing the width restriction on hover */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
 .btn-primary {
   color: #fff !important;
   background-color: #7aceb2 !important;
@@ -570,7 +599,7 @@ Form {
   text-decoration: none;
   color: rgba(122, 206, 178, 0.936);
 }
-.ept-link:hover{
+.ept-link:hover {
   color: rgba(16, 238, 164, 0.936);
 }
 
@@ -588,9 +617,6 @@ Form {
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
-
-
-
 
 @media (max-width: 767px) {
   .tech-icons {
