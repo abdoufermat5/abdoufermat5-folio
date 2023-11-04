@@ -5,10 +5,9 @@ import Particle from "../Particle";
 import projects from "../../Assets/Projects/projects.jpg";
 import dataQuality from "../../Assets/Projects/dataQuality.png";
 import cloud_perso from "../../Assets/Projects/cloud_perso.jpg";
-import xaalys from "../../Assets/Projects/xaalys.png";
-import teamxing from "../../Assets/Projects/teamxing.jpg";
 import desaes from "../../Assets/Projects/DES-vs-AES.jpg";
 import xoss from "../../Assets/Projects/xoss.png";
+import veilify from "../../Assets/Projects/veilify.png"
 import microfrontend from "../../Assets/Projects/microfrontend.png";
 
 function Projects() {
@@ -49,27 +48,19 @@ function Projects() {
         <p style={{ color: "white" }}>
          <u>Web & Mobile Applications</u>
         </p>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
          
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={xaalys}
+              imgPath={veilify}
               isBlog={false}
-              title="Xaalys"
-              description="Xaalys is a payment card, a RIB and an application for teenagers aged 12 to 17. All under the control of parents."
-              link="https://play.google.com/store/apps/details?id=com.app.diana.xaalys_r&hl=en&gl=US"
+              title="Veilify"
+              description="Welcome to Veilify - the app that lets you black out parts of your images with ease! Just drop an image and let us do the magic."
+              link="https://github.com/abdoufermat5/veilify"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={teamxing}
-              isBlog={false}
-              title="Teamxing"
-              description="A marketplace where vendors and sellers collaborate through the sale of new and used products in order to raise funds for social and non-profit groups. TeamXING Sports is now available on the Play Store where teams and coaches raise money through the sale of sports gear and equipment by their members and their social networks."
-              link="https://play.google.com/store/apps/details?id=com.teamxing.app"
-            />
-          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
@@ -86,7 +77,7 @@ function Projects() {
               imgPath={microfrontend}
               isBlog={false}
               title="Micro Front End"
-              description="The goal of this project is to adopt a new strategy for the development of frontend web applications. Contrary to what is commonly done, that is to say a single project with a multitude of functionalities depending on each other, this new approach offers the possibility to separate the project into several parts and to develop these parts independently. The goal of module federation is to expose these sub-parts to a large entity that we call here container app (test-app). This way each part can be in a separate repository and be integrated in real time in the container app."
+              description="The goal of this project is to adopt a new strategy for the development of frontend web applications. "
               link="https://github.com/abdoufermat5/mico-front-end"
             />
           </Col>
