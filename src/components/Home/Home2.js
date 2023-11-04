@@ -24,31 +24,20 @@ function Home2() {
               </i>
               <br />
               <br />
-              <Tilt
-                className="track-on-window"
-                perspective={500}
-                glareEnable={true}
-                glareMaxOpacity={0.75}
-                glarePosition="all"
-                scale={1.02}
-                trackOnWindow={true}
+              <div
+                className="card"
+                style={{ opacity: 1, backgroundColor: "#769c86", padding: "10px" }}
               >
-                <div
-                  className="card"
-                  style={{ opacity: 0.3, backgroundColor: "#769c86" }}
-                >
-                  Ready to take your data infrastructure to the next level?
-                  &nbsp;
-                  <i>
-                    <b className="purple">
-                      I bring a strong background in data engineering,{" "}
-                    </b>{" "}
-                    enabling organizations to harness the power of their data
-                    and make informed decisions{" "}
-                    <b className="purple">with confidence.</b>
-                  </i>
-                </div>
-              </Tilt>
+                Ready to take your data infrastructure to the next level? &nbsp;
+                <i>
+                  <b className="purple">
+                    I bring a strong background in data engineering,{" "}
+                  </b>{" "}
+                  enabling organizations to harness the power of their data and
+                  make informed decisions{" "}
+                  <b className="purple">with confidence.</b>
+                </i>
+              </div>
               <br />
               <br />
               Whenever possible, I also apply my passion for developing apps
@@ -89,7 +78,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              
+
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/abdou-yaya-sadiakhou-40a94b1a3/"
