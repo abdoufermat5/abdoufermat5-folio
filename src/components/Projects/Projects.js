@@ -57,7 +57,7 @@ function Projects() {
               isBlog={false}
               title="Veilify"
               description="Welcome to Veilify - the app that lets you black out parts of your images with ease! Just drop an image and let us do the magic."
-              link="https://github.com/abdoufermat5/veilify"
+              link="https://veilify.vercel.app/"
             />
           </Col>
 
