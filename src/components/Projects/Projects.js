@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
 import projects from "../../Assets/Projects/projects.jpg";
 import deduplication from "../../Assets/Projects/deduplication.png";
 import gof from "../../Assets/Projects/conway-gof1.png";

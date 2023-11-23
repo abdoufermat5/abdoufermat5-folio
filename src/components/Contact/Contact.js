@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
 import emailjs from "emailjs-com";
 import { validateNameMessage, validateEmail } from "./validation";
 import Card from "./Card";
