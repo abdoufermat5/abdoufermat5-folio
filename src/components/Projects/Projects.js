@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import projects from "../../Assets/Projects/projects.jpg";
-import deduplication from "../../Assets/Projects/deduplication.png"
+import deduplication from "../../Assets/Projects/deduplication.png";
+import gof from "../../Assets/Projects/conway-gof1.png";
 import dataQuality from "../../Assets/Projects/dataQuality.png";
 import cloud_perso from "../../Assets/Projects/cloud_perso.jpg";
 import desaes from "../../Assets/Projects/DES-vs-AES.jpg";
@@ -14,7 +15,7 @@ import microfrontend from "../../Assets/Projects/microfrontend.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
+      
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Side projects </strong>
@@ -22,9 +23,18 @@ function Projects() {
         <h2 style={{ color: "white", marginTop: "3px" }}>
           Here are a few projects I've worked on recently.
         </h2>
-        <p style={{ color: "white" }}>
-          <u>Big Data projects</u>
-        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={gof}
+              isBlog={false}
+              title="Game Of Life John Conway"
+              description="The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
+              I created a python package that allows you to play the game of life in the terminal and also can be implemented in a web application."
+              link="https://pypi.org/project/galsen-game-of-life/"
+            />
+          </Col>
+        </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -56,9 +66,6 @@ function Projects() {
             />
           </Col>
         </Row>
-        <p style={{ color: "white" }}>
-          <u>Web & Mobile Applications</u>
-        </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">

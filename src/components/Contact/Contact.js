@@ -223,7 +223,6 @@ export default class Contact extends React.Component {
 
     return (
       <Container fluid className="contact-section">
-        <Particle />
         <Container>
           <h1 className="project-heading">
             Get In <strong className="purple">TOUCH</strong>
