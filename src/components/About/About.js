@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Devstack";
 import ProgrammingStack from "./Programmingstack";
@@ -14,7 +13,6 @@ function About() {
   return (
     <section>
       <Container fluid className="about-section">
-        <Particle />
         <Container>
           <Row style={{ justifyContent: "center", padding: "10px" }}>
             <Col

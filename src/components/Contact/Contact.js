@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
 import emailjs from "emailjs-com";
 import { validateNameMessage, validateEmail } from "./validation";
 import Card from "./Card";
@@ -223,7 +222,6 @@ export default class Contact extends React.Component {
 
     return (
       <Container fluid className="contact-section">
-        <Particle />
         <Container>
           <h1 className="project-heading">
             Get In <strong className="purple">TOUCH</strong>

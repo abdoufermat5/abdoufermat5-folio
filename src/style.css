@@ -1,14 +1,14 @@
 html {
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(8, 19, 24, 0.904)
+    rgba(14, 13, 13, 0.582),
+    rgba(17, 16, 16, 0.904)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(14, 13, 13, 0.582),
+    rgba(17, 16, 16, 0.904)
   );
 
   --imp-text-color: #7aceb2;
@@ -32,7 +32,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #051213;
+  background-color: #050505;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -76,9 +76,9 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #374d53a9 !important;
+  background: #0a0a0a !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(18, 110, 95, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px rgba(7, 7, 7, 0.171) !important;
   backdrop-filter: blur(15px) !important;
 }
 
@@ -97,7 +97,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #7aceb2 !important;
+  background: #7aceb2 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -144,7 +144,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background: #0a0a0a !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -193,7 +193,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #7aceb2;
+  background: #0a0a0a;
   bottom: 1px;
   left: 0;
   z-index: -1;
